@@ -24,38 +24,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="uU6-zJ-maF">
-                                <rect key="frame" x="16" y="80" width="343" height="104.5"/>
+                                <rect key="frame" x="16" y="80" width="343" height="437"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ald-gC-EOz">
-                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="129" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29C-Y8-QLT">
-                                        <rect key="frame" x="0.0" y="32.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="33" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-3S-WIO">
-                                        <rect key="frame" x="0.0" y="74.5" width="151" height="30"/>
+                                        <rect key="frame" x="0.0" y="75" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfb-Wi-JIS"/>
                                         </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-hJ-wTu">
+                                        <rect key="frame" x="0.0" y="117" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="NyR-hJ-wTu" secondAttribute="height" multiplier="1:1" id="PIl-JI-qyg"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="UvO-U0-0Bm" appends="YES" id="CV8-Qp-Kgu"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="29C-Y8-QLT" secondAttribute="trailing" id="r26-sK-CED"/>
                                 </constraints>
                             </stackView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zeN-FP-U7e">
-                                <rect key="frame" x="16" y="192" width="320" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="zeN-FP-U7e" secondAttribute="height" multiplier="1:1" id="JGb-un-AEp"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -67,11 +71,20 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="Ald-gC-EOz" id="aD0-kc-zXJ"/>
                         <outlet property="nameTextField" destination="29C-Y8-QLT" id="rFP-zP-aBC"/>
+                        <outlet property="photoImageView" destination="NyR-hJ-wTu" id="lix-S6-VTA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UvO-U0-0Bm">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="dn8-1A-Qrl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="540" height="540"/>
+    </resources>
 </document>
