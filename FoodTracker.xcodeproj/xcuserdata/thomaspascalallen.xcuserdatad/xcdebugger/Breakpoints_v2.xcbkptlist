@@ -22,16 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodTracker/RatingControl.swift"
-            timestampString = "500840111.433265"
+            timestampString = "500841565.109936"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "init(coder:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "intrinsicContentSize()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
