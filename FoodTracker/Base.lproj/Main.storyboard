@@ -60,7 +60,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="0ZV-pl-Q2L">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="XE1-1p-qKp"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="XE1-1p-qKp">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="L78-mW-ok8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="NDe-RN-OAZ">
                             <connections>
                                 <segue destination="Bf4-In-brH" kind="unwind" unwindAction="unwindToMealListWithSender:" id="Ozc-P7-qM2"/>
@@ -68,6 +72,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancel" destination="XE1-1p-qKp" id="vEh-a3-fTj"/>
                         <outlet property="nameTextField" destination="29C-Y8-QLT" id="rFP-zP-aBC"/>
                         <outlet property="photoImageView" destination="NyR-hJ-wTu" id="lix-S6-VTA"/>
                         <outlet property="ratingControl" destination="ExW-tX-cNL" id="ZqI-tI-jCv"/>
